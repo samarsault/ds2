@@ -15,13 +15,13 @@ $ pip install .
 
 ## Usage
 
-We need to first define the environment variable DS2_DIR, the path to the datastore.
+We need to first define the environment variable DS2_DIR, the path to the database root directory.
 
 ```sh
-export DS2_DIR="/usr/local/ds2" # may require sudo if using this path
+export DS2_DIR="$HOME/ds2" 
 ```
 
-Ds2 can then be invokes as
+ds2 can then be invoked as
 
 ```sh
 $ ds2
