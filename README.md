@@ -1,6 +1,6 @@
 # ds2 (Distributed, Secure Storage Database)
 
-A simple encrypted database for files.
+An encrypted database for files.
 
 ## Need
 Sometimes, instead of entire folders, which are visibly encrypted, we need to store only files
