@@ -37,3 +37,18 @@ Commands:
   destroy  Destroy database
   ls       List all databases
 ```
+
+Accessing a database will launch a shell to perform operations in the database.
+
+```sh
+$ ds2 access test
+Enter Password:
+Initialized Database test
+
+> help
+
+Documented commands (type help <topic>):
+========================================
+add  extract  help  ls  quit  rm
+
+```
