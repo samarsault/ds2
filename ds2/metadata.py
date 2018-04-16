@@ -22,11 +22,13 @@ class Meta(object):
 
     def assign_id(self):
         mx = len(self.data)
-        is_assigned = [ False ] * (mx + 1)
+        is_assigned = { }
         for item in self.data:
             is_assigned[item['id']] = True
+            mx = max(mx, item['id'])
+            
         for x in range(0, mx+1):
-            if is_assigned[x] == False:
+            if x not in is_assigned:
                 return x
 
     # add file to metadata
