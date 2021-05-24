@@ -1,9 +1,9 @@
 import os
 import shutil
-from metadata import Meta
-from keys import Key
-from shared import conf, meta_loc, create_pass, ask_pass
-from crypt import *
+from ds2.metadata import Meta
+from ds2.keys import Key
+from ds2.shared import conf, meta_loc, create_pass, ask_pass
+from ds2.crypt import *
 import sys
 
 class Db(object):

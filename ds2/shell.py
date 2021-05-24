@@ -14,18 +14,18 @@ class DbShell(Cmd):
             Syntax: add file_name
         """
         if len(args) == 0:
-            print 'No File Specified'
+            print('No File Specified')
             return
         else:
             if db.add_file(args):
-                print 'Success'
+                print('Success')
             else:
-                print 'Error: File not found'
+                print('Error: File not found')
 
     def do_ls(self, args):
         """ Lists the Files in the Database"""
         for item in db.meta_data.data:
-            print "(%s) %s" %(item['id'], item['name'])
+            print('(%s) %s' %(item['id'], item['name']))
 
     def do_rm(self, args):
         """
@@ -35,13 +35,13 @@ class DbShell(Cmd):
         k = 0
         try:
             k = int(args)
-            print k
+            print(k)
             if db.rm_file(k):
-                print 'Success'
+                print('Success')
             else:
-                print 'Error: not a valid id'
+                print('Error: not a valid id')
         except:
-            print 'Not a valid File Id'
+            print('Not a valid File Id')
 
     def do_extract(self, args):
         """ 
@@ -50,7 +50,7 @@ class DbShell(Cmd):
         """
         j= args.split(' ')
         if len(j) < 1:
-             print 'Not enough arguments'
+             print ('Not enough arguments')
         else:
             res = None
             if len(j)==1:
@@ -58,13 +58,13 @@ class DbShell(Cmd):
             else:
                 res =db.get_file(int( j[0] ), j[1])
             if res == -1:
-                print 'Error, invalid ID'
+                print ('Error, invalid ID')
             else:
-                print 'Success!'
+                print ('Success!')
 
     def do_quit(self, args):
         """Quits the shell."""
-        print "Quitting."
+        print ('Quitting.')
         raise SystemExit
 
 def start_shell(db_name):

@@ -1,7 +1,7 @@
 from tempfile import NamedTemporaryFile
-from shared import encode_key, meta_loc
+from ds2.shared import encode_key, meta_loc
 import bson, os
-from crypt import *
+from ds2.crypt import *
 
 """ Database Metadata """
 class Meta(object):

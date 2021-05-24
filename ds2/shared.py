@@ -30,7 +30,7 @@ def meta_loc(name):
     return conf['store']+ name
 
 def check_pass(pwd, hsh):
-    return bcrypt.checkpw(pwd, hsh)
+    return bcrypt.checkpw(pwd.encode(), hsh.encode())
 
 def ask_pass(hsh):
     pwd = ''
@@ -39,11 +39,11 @@ def ask_pass(hsh):
         pwd = getpass('Enter Password:')
         if check_pass(pwd, hsh):
             break
-        print 'Incorrect, Please Try Again.'
+        print ('Incorrect, Please Try Again.')
         tries+=1
 
     if tries > 3:
-        print 'No. of Tries Exceeded Limit, exiting...'
+        print ('No. of Tries Exceeded Limit, exiting...')
         return -1
     return pwd
 
@@ -52,11 +52,11 @@ def ask_pass(hsh):
 def create_pass():
     pwd = getpass('Enter Password:')
     salt = bcrypt.gensalt()
-    hashed = bcrypt.hashpw(pwd, salt);
+    hashed = bcrypt.hashpw(pwd.encode(), salt);
     return pwd, hashed
 
 
 def encode_key(password):
     digest = hashes.Hash(hashes.SHA256(), backend=default_backend())
-    digest.update(password)
+    digest.update(password.encode())
     return base64.urlsafe_b64encode(digest.finalize())

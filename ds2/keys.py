@@ -1,7 +1,7 @@
 import csvmapper
 from csvmapper import FieldMapper, CSVParser
 
-from shared import conf
+from ds2.shared import conf
 
 class Key(object):
     def __init__(self):

@@ -11,7 +11,7 @@
 """
 
 """ Import Modules """
-from shared import init_dir_struct, conf
-from db import Db
-from keys import Key
-import shell
+from ds2.shared import init_dir_struct, conf
+from ds2.db import Db
+from ds2.keys import Key
+import ds2.shell
