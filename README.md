@@ -1,4 +1,4 @@
-# ds2 (Distributed, Secure Storage Database)
+# ds2
 
 An encrypted database for files.
 
