@@ -1,4 +1,4 @@
-# ds2 (Distributed, Secure Storage Database)
+# ds2
 
 An encrypted database for files.
 
@@ -8,7 +8,7 @@ Sometimes, instead of entire folders, which are visibly encrypted, we need to st
 ## Installation
 
 ```sh
-$ git clone https://github.com/thelehhman/ds2
+$ git clone https://github.com/samarsault/ds2
 $ cd ds2
 $ pip install .
 ```
